@@ -14,7 +14,7 @@ def auto_archive(filename):
         logger.info(f"File to be archived : {filename}")
         archive_dir = get_app_archive_dir()
         if not os.path.exists(archive_dir):
-            logger.info(f"Mother of god Archive directory not found, so creating one")
+            logger.info(f"Looks like there is no archive directory, so creating one")
             os.makedirs(archive_dir)
         file_basename = os.path.splitext(filename)[0]
         file_ext = os.path.splitext(filename)[1]
